@@ -8,6 +8,7 @@ link_directories(libs/sqlite3)
 
 add_executable(DataBaseApp main.cpp
         Hospital.h
-        Hospital.cpp)
+        Hospital.cpp
+        libs/sqlite3/sqlite3.c)
 
-target_link_libraries(DataBaseApp sqlite3)
+target_include_directories(DataBaseApp PRIVATE libs/sqlite3)
